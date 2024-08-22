@@ -4,18 +4,17 @@
 
 # หมายเหตุ ฟังก์ชันต้องมี parameter แค่เพียง 1 ตัว
 
-
 s = input("Enter Input : ")
 # "abcd"
-def length(txt):     
-    try :
-        if txt%2 == 0 :
-            print(s[txt]+"*", end="")
-        else :
-            print(s[txt]+"~", end="")
-        return length(txt+1)
-    except :
-        return txt
 
-print("\n",length(0), sep="")
-#ตรง print(เป็นแค่ตัวอย่างสามารถแก้ไขได้)
+def recur(i):
+    try:
+        if i%2 == 0:
+            print(s[i]+"*", end="")
+        else :
+            print(s[i]+"$", end="")
+        return recur(i+1)
+    except:
+        return i
+
+print(recur(0))
