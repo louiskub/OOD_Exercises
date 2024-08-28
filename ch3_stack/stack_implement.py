@@ -2,10 +2,13 @@ import sys
 
 class Stack:
     def __init__(self, list = None):
-        if lst == None:
-            lst = []
+        if list == None:
+            list = []
         self.lst = list
     
+    def __len__(self):
+        return len(self.lst)
+
     def items(self):
         return self.lst
 
@@ -56,12 +59,12 @@ class Queue:
     def isEmpty(self):
         return len(self.lst) == 0
 
-
-a = Queue()
-b = Queue()
-a.push(1)
-a.push(2)
-a.push(3)
-a.push(4)
-a.push(5)
-print(a, b)
+if __name__ == "__main__":
+    a = Queue()
+    b = Queue()
+    a.push(1)
+    a.push(2)
+    a.push(3)
+    a.push(4)
+    a.push(5)
+    print(a, b)

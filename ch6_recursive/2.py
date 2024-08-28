@@ -16,6 +16,5 @@ def length(txt):
         return length(txt+1)
     except :
         return txt
-
 print("\n",length(0), sep="")
 #ตรง print(เป็นแค่ตัวอย่างสามารถแก้ไขได้)
