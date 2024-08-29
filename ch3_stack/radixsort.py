@@ -1,26 +1,28 @@
 from stack_implement import Queue
 
-inp = input('Number : ').split()
-maxlen = 0
-for i in range(len(inp)):
-    maxlen = max(maxlen, len(inp[i]))
-    inp[i] = int(inp[i])
+inp = [int(e) for e in input('Number : ').split()]
+print(inp)
+max_len = len(str(max(inp)))
 
-num = [Queue() for _ in range(10)]
-for i in range(maxlen):
-    # sort 0-9
-    for cur in inp:
-        temp = int(cur / (10**i)) % 10
-        num[temp].push(cur)
+q = [Queue() for k in range(10)]
+result = Queue(inp)
+
+for i in range(max_len):
+    for num in inp:
+        temp = (num//(10**i)) % 10
+        q[temp].push(num)
     
     for j in range(10):
-        print(j, num[j].lst)
-    print("\n")
-    # reset sort
+        print(j, q[j].lst)
+
     inp = []
-    for q in range(9,-1,-1):
-        while not num[q].isEmpty():
-            inp.append(num[q].pop())
-    
+    # for que in range(10):
+    for que in range(9,-1,-1):    #REVERSE
+        while not q[que].isEmpty():
+            inp.append(q[que].pop())
+    print(inp)
+    print("\n")
+
 print(inp)
+            
 

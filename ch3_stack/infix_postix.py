@@ -66,14 +66,14 @@ def postcal(lst):
 
 
 if __name__ == "__main__":
-    # inp = list(input("Infix : "))
-    # print(inp)
-    # inf2post(inp)
+    inp = list(input("Infix : "))
+    print(inp)
+    inf2post(inp)
 
     # inp = list(input("Postfix : "))
     # print(inp)
     # post2inf(inp)
 
-    inp = input("Postfix Cal : ").split()
-    print(inp)
-    postcal(inp)
+    # inp = input("Postfix Cal : ").split()
+    # print(inp)
+    # postcal(inp)
