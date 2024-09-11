@@ -10,12 +10,12 @@ for letter in s:
         
     elif letter in ')]}': 
         if not stack:
-            ans += 1
+            ans += 2
             continue
-        temp = stack[-1] + letter
-        if temp in '()[]{}':
-            stack.pop()
-        else :
+        temp = stack.pop() + letter
+        if temp not in '()[]{}':
+        #     stack.pop()
+        # else :
             ans += 1
             
         # else 
