@@ -1,3 +1,11 @@
+# ALV insert
+
+# ให้น้องๆสร้าง AVL Tree ด้วย Class โดยผลลัพธ์ให้แสดงเป็น Tree ในแต่ละรอบหลังจาก Insert ให้ตรวจสอบว่า balance หรือยัง หากไม่ให้ ปรับ Balance ให้เรียบร้อยแล้วและแสดงผล
+
+# ** ถ้าสงสัยสามารถดู visualization ของ AVL ได้ที่ website นี้ : https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
+
+#code เป็นเพียงตัวอย่างเท่านั้นสามารถเขียนขึ้นเองโดยไม่ต้องอ้างอิงจาก code นี้ก็ได
+
 class Node:
     def __init__(self, data, left = None, right = None):
         self.data = data

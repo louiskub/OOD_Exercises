@@ -1,3 +1,22 @@
+# จงเขียนโปรแกรมเพื่อรับข้อมูล แล้วสร้าง AVL tree และแสดงการแวะผ่านโหนดต่าง ๆ แบบ post-order
+
+# โดยแก้ไข method add คือการเพิ่มข้อมูลเข้าใน AVLTree และ method postOrder คือ บริการแวะผ่านโหนดทุกโหนดแบบหลังลำดับ จากส่วนของโปรแกรมต่อไปนี้
+
+# Enter Input : AD 10,AD 5,AD 15,PR,PO,AD 20,AD 8,PR,PO
+#       15
+#  10
+#       5
+
+# AVLTree post-order : 5 15 10 
+#            20
+#       15
+#  10
+#            8
+#       5
+
+# AVLTree post-order : 8 5 20 15 10 
+
+
 class Node:
     def __init__(self, data, left = None, right = None):
         self.data = data
