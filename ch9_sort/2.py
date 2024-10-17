@@ -1,3 +1,14 @@
+# ให้เรียงลำดับ input จากเลขที่มีค่าซ้ำกันมากที่สุด ไป ซ้ำน้อยที่สุด
+# มีเงื่อนไขว่า หากเลขที่มีจำนวนซ้ำเท่ากันให้แสดงจากเลขที่มาก่อนไปหลังเสมอ 
+
+# ****** ห้ามใช้ Built-in Function ที่เกี่ยวกับ Sort ให้น้องเขียนฟังก์ชัน Sort เอง
+# Enter list  of numbers: 1 2 2 3 3 3
+# number 3, total: 3
+# number 2, total: 2
+# number 1, total: 1
+
+
+
 inp = [int(e) for e in input("Enter list  of numbers: ").split()]
 st = set(inp)
 num = []

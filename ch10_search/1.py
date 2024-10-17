@@ -1,3 +1,9 @@
+# ให้น้องๆเขียน Binary Search โดยใช้ Recursive เพื่อหาว่ามีค่านั้นอยู่ใน list หรือไม่ ถ้าหากมีให้ตอบ True หากไม่มีให้ตอบ False
+
+# ***** อธิบาย Input
+# 1. ด้านซ้าย  จะเป็น list ของ Data
+# 2. ด้านขวา   จะเป็นค่าที่เราต้องการจะหา
+
 def bi_search(l, r, arr, x):
     if l > r :
         return False

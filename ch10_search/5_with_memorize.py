@@ -34,11 +34,11 @@ def condition(mid, tasks, worker):
  
  
 # Input processing
-# inp, worker = input("Enter jobs and number of workers : ").split('/')
-from datetime import datetime
-bb = "1 "*50
-inp, worker = f"{bb}/8".split('/')
-a = datetime.now()
+inp, worker = input("Enter jobs and number of workers : ").split('/')
+# from datetime import datetime
+# bb = "1 "*40
+# inp, worker = f"{bb}/8".split('/')
+# a = datetime.now()
 inp = [int(e) for e in inp.split()]
 worker = int(worker)
  
@@ -54,4 +54,4 @@ while l <= r:
  
 # Output the minimum time to complete the jobs
 print(f"Minimum time to complete jobs with {worker} workers is {l}")
-print(datetime.now()-a)
+# print(datetime.now()-a)

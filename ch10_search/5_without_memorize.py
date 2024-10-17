@@ -17,15 +17,15 @@ def condition(mid, tasks, worker):
                 break
         return False
     return recur(0)
- 
- 
+
+
 # inp, worker = input("Enter jobs and number of workers : ").split('/')
 from datetime import datetime
-inp, worker = "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1/8".split('/')
+inp, worker = "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1/8".split('/')
 a = datetime.now()
 inp = [int(e) for e in inp.split()]
 worker = int(worker)
- 
+
 l, r = max(inp), sum(inp)
 while l <= r:
     mid = (l+r)//2
