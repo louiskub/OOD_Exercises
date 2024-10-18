@@ -146,19 +146,7 @@ class Controller:
 
     def find_max(self):
         return max(guest.amount for guest in self.lst)
-
-    def search_room_man(self, room_num):
-        l, r = 0, len(self.man) - 1
-        while l <= r:
-            mid = (l + r) // 2
-            if room_num > self.man[mid]:
-                l = mid + 1
-            elif room_num < self.man[mid]:
-                r = mid - 1
-            else:
-                return "found", mid
-        return "not found", l
-
+        
     def __add_manual(self, room_num):
         new_root = self.avl_tree.insert(self.man, room_num)
         if new_root is not self.man:
