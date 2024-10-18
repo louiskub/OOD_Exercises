@@ -138,7 +138,6 @@ class Controller:
         self.hotel = 0
         # people  #bus    #boat     #fleet
         self.lst = [Guest(), Guest(), Guest(), Guest()]  # type 0-3
-        self.room = []
         self.man = None
         self.avl_tree = AVLTree()
 
