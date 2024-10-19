@@ -148,11 +148,10 @@ class Controller:
         return max(guest.amount for guest in self.lst)
         
     def __add_manual(self, room_num):
-        new_root = self.avl_tree.insert(self.man, room_num)
-        if new_root is not self.man:
-            self.man = new_root
-            return "Add Manual Success"
-        return "Room Exist"
+        if self.avl_tree.search(self.man, room_num):
+            return "Room Exist"
+        self.man = self.avl_tree.insert(self.man, room_num)
+        return "Add Manual Success"
 
     def add_manual(self, room_num):
         inhotel = self.check_hotel() + 1
@@ -169,8 +168,7 @@ class Controller:
         if self.avl_tree.search(self.man, room_num) is None:
             return "Room does not exist in manual list."
 
-        new_man = self.avl_tree.delete(self.man, room_num)
-        self.man = new_man
+        self.man = self.avl_tree.delete(self.man, room_num)
         return "Delete Manual Success"
 
     def search_room(self, room_num):
