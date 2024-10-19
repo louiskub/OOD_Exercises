@@ -296,7 +296,7 @@ class Controller:
                     boat[0] = 0
                     boat[1] += 1
                     if boat[1] == boat_channal[1]:
-                        boat[1] = 1
+                        boat[1] = 0
                         boat[2] += 1
             # fleet
             if i < self.lst[3].amount:
